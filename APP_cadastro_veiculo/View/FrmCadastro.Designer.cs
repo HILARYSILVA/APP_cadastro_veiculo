@@ -32,11 +32,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgv_combustivel = new System.Windows.Forms.DataGridView();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_combustivel = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.btnExcluir = new System.Windows.Forms.Button();
@@ -47,17 +47,17 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btn_combustivel_excluir = new System.Windows.Forms.Button();
+            this.btn_combustivel_cancelar = new System.Windows.Forms.Button();
+            this.btn_combustivel_alterar = new System.Windows.Forms.Button();
+            this.btn_incluir_combustivel = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_combustivel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
@@ -100,13 +100,14 @@
             this.dataGridView1.Size = new System.Drawing.Size(374, 150);
             this.dataGridView1.TabIndex = 4;
             // 
-            // dataGridView2
+            // dgv_combustivel
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(8, 323);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(374, 150);
-            this.dataGridView2.TabIndex = 5;
+            this.dgv_combustivel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_combustivel.Location = new System.Drawing.Point(8, 323);
+            this.dgv_combustivel.Name = "dgv_combustivel";
+            this.dgv_combustivel.Size = new System.Drawing.Size(374, 150);
+            this.dgv_combustivel.TabIndex = 5;
+            this.dgv_combustivel.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_combustivel_CellContentClick);
             // 
             // dataGridView3
             // 
@@ -131,12 +132,12 @@
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 8;
             // 
-            // textBox2
+            // txt_combustivel
             // 
-            this.textBox2.Location = new System.Drawing.Point(16, 297);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 9;
+            this.txt_combustivel.Location = new System.Drawing.Point(16, 297);
+            this.txt_combustivel.Name = "txt_combustivel";
+            this.txt_combustivel.Size = new System.Drawing.Size(100, 20);
+            this.txt_combustivel.TabIndex = 9;
             // 
             // textBox3
             // 
@@ -232,45 +233,45 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button2
+            // btn_combustivel_excluir
             // 
-            this.button2.Location = new System.Drawing.Point(366, 281);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(70, 27);
-            this.button2.TabIndex = 30;
-            this.button2.Text = "EXCLUIR";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btn_combustivel_excluir.Location = new System.Drawing.Point(366, 281);
+            this.btn_combustivel_excluir.Name = "btn_combustivel_excluir";
+            this.btn_combustivel_excluir.Size = new System.Drawing.Size(70, 27);
+            this.btn_combustivel_excluir.TabIndex = 30;
+            this.btn_combustivel_excluir.Text = "EXCLUIR";
+            this.btn_combustivel_excluir.UseVisualStyleBackColor = true;
+            this.btn_combustivel_excluir.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btn_combustivel_cancelar
             // 
-            this.button3.Location = new System.Drawing.Point(205, 280);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(79, 27);
-            this.button3.TabIndex = 29;
-            this.button3.Text = "CANCELAR";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btn_combustivel_cancelar.Location = new System.Drawing.Point(205, 280);
+            this.btn_combustivel_cancelar.Name = "btn_combustivel_cancelar";
+            this.btn_combustivel_cancelar.Size = new System.Drawing.Size(79, 27);
+            this.btn_combustivel_cancelar.TabIndex = 29;
+            this.btn_combustivel_cancelar.Text = "CANCELAR";
+            this.btn_combustivel_cancelar.UseVisualStyleBackColor = true;
+            this.btn_combustivel_cancelar.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // btn_combustivel_alterar
             // 
-            this.button4.Location = new System.Drawing.Point(290, 281);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(70, 25);
-            this.button4.TabIndex = 28;
-            this.button4.Text = "ALTERAR";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btn_combustivel_alterar.Location = new System.Drawing.Point(290, 281);
+            this.btn_combustivel_alterar.Name = "btn_combustivel_alterar";
+            this.btn_combustivel_alterar.Size = new System.Drawing.Size(70, 25);
+            this.btn_combustivel_alterar.TabIndex = 28;
+            this.btn_combustivel_alterar.Text = "ALTERAR";
+            this.btn_combustivel_alterar.UseVisualStyleBackColor = true;
+            this.btn_combustivel_alterar.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button8
+            // btn_incluir_combustivel
             // 
-            this.button8.Location = new System.Drawing.Point(129, 280);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(70, 27);
-            this.button8.TabIndex = 27;
-            this.button8.Text = "INCLUIR";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.btn_incluir_combustivel.Location = new System.Drawing.Point(129, 280);
+            this.btn_incluir_combustivel.Name = "btn_incluir_combustivel";
+            this.btn_incluir_combustivel.Size = new System.Drawing.Size(70, 27);
+            this.btn_incluir_combustivel.TabIndex = 27;
+            this.btn_incluir_combustivel.Text = "INCLUIR";
+            this.btn_incluir_combustivel.UseVisualStyleBackColor = true;
+            this.btn_incluir_combustivel.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -326,16 +327,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RosyBrown;
-            this.ClientSize = new System.Drawing.Size(1139, 497);
+            this.ClientSize = new System.Drawing.Size(1005, 606);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button12);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button8);
+            this.Controls.Add(this.btn_combustivel_excluir);
+            this.Controls.Add(this.btn_combustivel_cancelar);
+            this.Controls.Add(this.btn_combustivel_alterar);
+            this.Controls.Add(this.btn_incluir_combustivel);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button6);
@@ -346,11 +347,11 @@
             this.Controls.Add(this.btnIncluir);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txt_combustivel);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView4);
             this.Controls.Add(this.dataGridView3);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dgv_combustivel);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -359,7 +360,7 @@
             this.Text = "                 ";
             this.Load += new System.EventHandler(this.FrmCadastro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_combustivel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
@@ -373,11 +374,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgv_combustivel;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_combustivel;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button btnExcluir;
@@ -388,10 +389,10 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btn_combustivel_excluir;
+        private System.Windows.Forms.Button btn_combustivel_cancelar;
+        private System.Windows.Forms.Button btn_combustivel_alterar;
+        private System.Windows.Forms.Button btn_incluir_combustivel;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;

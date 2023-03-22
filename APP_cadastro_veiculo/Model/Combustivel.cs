@@ -23,15 +23,13 @@ namespace APP_cadastro_veiculo.Model
             {
                 Banco.AbrirConexao();
                 //Fazendo o insert no banco na tabela de cidades
-                Banco.Comando = new MySql.Data.MySqlClient.MySqlCommand("USE carros; INSERT INTO Combustivel (nome) VALUES (@nome)", Banco.Conexao);
+                Banco.Comando = new MySqlCommand("USE carros; INSERT INTO Combustivel (nome) VALUES (@nome)", Banco.Conexao);
                 //Criando os parâmetros
                 Banco.Comando.Parameters.AddWithValue("@nome", Nome);
                 //Executando o Comando
                 Banco.Comando.ExecuteNonQuery();
                 //Fecha a conexão
                 Banco.FecharConexao();
-
-                MessageBox.Show("TESTE", "CHEGFUEI", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (Exception e)
@@ -46,7 +44,7 @@ namespace APP_cadastro_veiculo.Model
             {
                 Banco.AbrirConexao();
               
-                Banco.Comando = new MySql.Data.MySqlClient.MySqlCommand("delete from Combustivel where Id = @Id", Banco.Conexao);
+                Banco.Comando = new MySqlCommand("delete from Combustivel where Id = @Id", Banco.Conexao);
                 Banco.Comando.Parameters.AddWithValue("@Id", Id);
                 Banco.Comando.ExecuteNonQuery();
                 Banco.FecharConexao();
@@ -62,7 +60,7 @@ namespace APP_cadastro_veiculo.Model
             try
             {
                 Banco.AbrirConexao();
-                Banco.Comando = new MySql.Data.MySqlClient.MySqlCommand("UPDATE Combustivel SET nome = @nome where id = @id", Banco.Conexao);
+                Banco.Comando = new MySqlCommand("UPDATE Combustivel SET nome = @nome where id = @id", Banco.Conexao);
                 Banco.Comando.Parameters.AddWithValue("@nome", Nome);
                 Banco.Comando.ExecuteNonQuery();
                 Banco.FecharConexao();

@@ -24,7 +24,7 @@ namespace APP_cadastro_veiculo.Model
             {
                 Banco.AbrirConexao();
                 //Fazendo o insert no banco na tabela de cidades
-                Banco.Comando = new MySql.Data.MySqlClient.MySqlCommand("INSERT INTO Fabricante (nome) VALUES (@nome)", Banco.Conexao);
+                Banco.Comando = new MySqlCommand("INSERT INTO Fabricante (nome) VALUES (@nome)", Banco.Conexao);
                 //Criando os parâmetros
                 Banco.Comando.Parameters.AddWithValue("@nome", Nome);
                 //Executando o Comando
@@ -44,7 +44,7 @@ namespace APP_cadastro_veiculo.Model
                 {
                     Banco.AbrirConexao();
                     //Fazendo o delete no banco na tabela de cidades
-                    Banco.Comando = new MySql.Data.MySqlClient.MySqlCommand("delete from Fabricante where Id = @Id", Banco.Conexao);
+                    Banco.Comando = new MySqlCommand("delete from Fabricante where Id = @Id", Banco.Conexao);
                     Banco.Comando.Parameters.AddWithValue("@Id", Id);
                     Banco.Comando.ExecuteNonQuery();
                     Banco.FecharConexao();
@@ -60,10 +60,10 @@ namespace APP_cadastro_veiculo.Model
                 try
                 {
                     Banco.AbrirConexao();
-                    Banco.Comando = new MySql.Data.MySqlClient.MySqlCommand("UPDATE Fabricante SET nome = @nome where id = @id", Banco.Conexao);
+                    Banco.Comando = new MySqlCommand("UPDATE Fabricante SET nome = @nome where id = @id", Banco.Conexao);
                     Banco.Comando.Parameters.AddWithValue("@nome", Nome);
 
-                    Banco.Comando.Parameters.AddWithValue("@id", Id);
+                    Banco.Comando.Parameters.AddWithValue("@Id", Id);
                     Banco.Comando.ExecuteNonQuery();
                     Banco.FecharConexao();
                 }

@@ -24,7 +24,7 @@ namespace APP_cadastro_veiculo.Model
             {
                 Banco.AbrirConexao();
                 //Fazendo o insert no banco na tabela de cidades
-                Banco.Comando = new MySql.Data.MySqlClient.MySqlCommand("INSERT INTO Marca (nome) VALUES (@nome)", Banco.Conexao);
+                Banco.Comando = new MySqlCommand("INSERT INTO Marca (nome) VALUES (@nome)", Banco.Conexao);
                 //Criando os parâmetros
                 Banco.Comando.Parameters.AddWithValue("@nome", Nome);
                 //Executando o Comando
@@ -45,7 +45,7 @@ namespace APP_cadastro_veiculo.Model
             {
                 Banco.AbrirConexao();
                 //Fazendo o delete no banco na tabela de cidades
-                Banco.Comando = new MySql.Data.MySqlClient.MySqlCommand("delete from Marca where Id = @Id", Banco.Conexao);
+                Banco.Comando = new MySqlCommand("delete from Marca where Id = @Id", Banco.Conexao);
                 Banco.Comando.Parameters.AddWithValue("@Id", Id);
                 Banco.Comando.ExecuteNonQuery();
                 Banco.FecharConexao();
@@ -61,7 +61,7 @@ namespace APP_cadastro_veiculo.Model
             try
             {
                 Banco.AbrirConexao();
-                Banco.Comando = new MySql.Data.MySqlClient.MySqlCommand("UPDATE Fabricante SET nome = @nome where id = @id", Banco.Conexao);
+                Banco.Comando = new MySqlCommand("UPDATE Fabricante SET nome = @nome where id = @id", Banco.Conexao);
                 Banco.Comando.Parameters.AddWithValue("@nome", Nome);
 
                 Banco.Comando.Parameters.AddWithValue("@Id", Id);
@@ -76,22 +76,5 @@ namespace APP_cadastro_veiculo.Model
 
        
 
-    }
-
-    internal class MySqlCommand
-    {
-        private string v;
-        private MySql.Data.MySqlClient.MySqlConnection conexao;
-
-        public MySqlCommand(string v, MySql.Data.MySqlClient.MySqlConnection conexao)
-        {
-            this.v = v;
-            this.conexao = conexao;
-        }
-
-        public static implicit operator MySql.Data.MySqlClient.MySqlCommand(MySqlCommand v)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -59,14 +59,14 @@
             // veiculoToolStripMenuItem
             // 
             this.veiculoToolStripMenuItem.Name = "veiculoToolStripMenuItem";
-            this.veiculoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.veiculoToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.veiculoToolStripMenuItem.Text = "Veiculo";
             this.veiculoToolStripMenuItem.Click += new System.EventHandler(this.veiculoToolStripMenuItem_Click);
             // 
             // informaçõesToolStripMenuItem
             // 
             this.informaçõesToolStripMenuItem.Name = "informaçõesToolStripMenuItem";
-            this.informaçõesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.informaçõesToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.informaçõesToolStripMenuItem.Text = "Informações";
             this.informaçõesToolStripMenuItem.Click += new System.EventHandler(this.informaçõesToolStripMenuItem_Click);
             // 
@@ -86,6 +86,7 @@
             this.Name = "FormMenu";
             this.Text = "FormMenu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FormMenu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

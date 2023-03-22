@@ -19,6 +19,7 @@ namespace APP_cadastro_veiculo
         Combustivel c;
         Tipo t;
 
+
         public FrmCadastro()
         {
             InitializeComponent();
@@ -40,7 +41,12 @@ namespace APP_cadastro_veiculo
 
         void carregarGrid(string v)
         {
-        
+            //C = new Cidade()
+            //{
+            //    Nome = pesquisa
+            //};
+            //dgvCidades.DataSource = C.Consultar();
+
         }
 
     
@@ -197,11 +203,11 @@ namespace APP_cadastro_veiculo
 
         private void button8_Click(object sender, EventArgs e)
         {
-            if (textBox2.Text == String.Empty) return;
+            if (txt_combustivel.Text == String.Empty) return;
 
             c = new Combustivel()
             {
-                Nome = textBox2.Text,
+                Nome = txt_combustivel.Text,
             };
 
             c.Incluir();
@@ -221,9 +227,9 @@ namespace APP_cadastro_veiculo
         private void button4_Click(object sender, EventArgs e)
         {
             string a;
-            if (dataGridView2.SelectedRows.Count == 0) return;
+            if (dgv_combustivel.SelectedRows.Count == 0) return;
 
-            a = dataGridView2.CurrentRow.Cells[0].Value.ToString();
+            a = dgv_combustivel.CurrentRow.Cells[0].Value.ToString();
 
             if (a == "") return;
 
@@ -233,7 +239,7 @@ namespace APP_cadastro_veiculo
                 c = new Combustivel()
                 {
                     Id = int.Parse(a),
-                    Nome = textBox2.Text
+                    Nome = txt_combustivel.Text
                 };
 
                 c.Alterar();
@@ -246,9 +252,9 @@ namespace APP_cadastro_veiculo
         private void button2_Click(object sender, EventArgs e)
         {
             string a;
-            if (dataGridView2.Rows.Count == 1) return;
+            if (dgv_combustivel.Rows.Count == 1) return;
 
-            a = dataGridView2.CurrentRow.Cells[0].Value.ToString();
+            a = dgv_combustivel.CurrentRow.Cells[0].Value.ToString();
 
             if (a == "") return;
 
@@ -311,6 +317,14 @@ namespace APP_cadastro_veiculo
 
                 LimpaControles();
                 carregarGrid("");
+            }
+        }
+
+        private void dgv_combustivel_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgv_combustivel.RowCount > 0)
+            {
+                dgv_combustivel.Text = dgv_combustivel.CurrentRow.Cells["nome"].Value.ToString();
             }
         }
     }

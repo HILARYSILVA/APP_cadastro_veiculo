@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,23 +24,16 @@ namespace APP_cadastro_veiculo
         {
             try
             {
-                string data_source = "datasource=localhost;port=3307;username=root;password=etecjau;database=carros";
-                Conexao = new MySqlConnection(data_source);
-
-               // Conexao = new MySqlConnection("server=localhost;port=3307;uid=root;pwd=etecjau");
+                Conexao = new MySqlConnection("server=localhost;port=3307;uid=root;pwd=etecjau");
 
                 Conexao.Open();
 
-                MessageBox.Show("Conectou", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                //Comando = new MySqlCommand("USE carros;", Conexao);
-                //Comando.ExecuteNonQuery();
+                Comando = new MySqlCommand("USE carros;", Conexao);
+                Comando.ExecuteNonQuery();
             }
 
             catch (Exception e)
             {
-                //Console.WriteLine(e.StackTrace);
-
                 MessageBox.Show(e.Message, "Erro1", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -80,6 +73,11 @@ namespace APP_cadastro_veiculo
                 Comando.ExecuteNonQuery();
 
                 Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS Tipo " +
+                    "(Id integer auto_increment primary key, " +
+                    "nome varchar(40)) ", Conexao);
+                Comando.ExecuteNonQuery();
+
+                Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS Clientes " +
                     "(Id integer auto_increment primary key, " +
                     "nome varchar(40)) ", Conexao);
                 Comando.ExecuteNonQuery();

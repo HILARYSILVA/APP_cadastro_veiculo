@@ -29,5 +29,10 @@ namespace APP_cadastro_veiculo
             FrmCadastro form = new FrmCadastro();
             form.Show();
         }
+
+        private void FormMenu_Load(object sender, EventArgs e)
+        {
+            Banco.CriarBanco();
+        }
     }
 }

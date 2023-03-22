@@ -30,26 +30,25 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnImportar = new System.Windows.Forms.Button();
+            this.txtAno = new System.Windows.Forms.TextBox();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.chk_Particular = new System.Windows.Forms.CheckBox();
+            this.chk_Venda = new System.Windows.Forms.CheckBox();
+            this.chk_Aluguel = new System.Windows.Forms.CheckBox();
+            this.chk_Roubo = new System.Windows.Forms.CheckBox();
+            this.chk_Sinistro = new System.Windows.Forms.CheckBox();
+            this.chk_Revisao = new System.Windows.Forms.CheckBox();
+            this.txt_Obs = new System.Windows.Forms.TextBox();
+            this.txtQuilometragem = new System.Windows.Forms.TextBox();
+            this.txtNumero = new System.Windows.Forms.TextBox();
+            this.txtCor = new System.Windows.Forms.TextBox();
+            this.txtCombustivel = new System.Windows.Forms.TextBox();
+            this.txtTipo = new System.Windows.Forms.TextBox();
+            this.txtfabri = new System.Windows.Forms.TextBox();
+            this.txtModelo = new System.Windows.Forms.TextBox();
+            this.txtMarca = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -68,32 +67,51 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fabricante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ano = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Combustivel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Chassi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kilometragem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Observações = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Revisão = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Sinistro = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Roubo = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Aluguel = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Venda = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Particular = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.checkBox6);
-            this.groupBox1.Controls.Add(this.checkBox5);
-            this.groupBox1.Controls.Add(this.checkBox4);
-            this.groupBox1.Controls.Add(this.checkBox3);
-            this.groupBox1.Controls.Add(this.checkBox2);
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Controls.Add(this.textBox12);
-            this.groupBox1.Controls.Add(this.textBox11);
-            this.groupBox1.Controls.Add(this.textBox10);
-            this.groupBox1.Controls.Add(this.textBox9);
-            this.groupBox1.Controls.Add(this.textBox8);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label18);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.btnImportar);
+            this.groupBox1.Controls.Add(this.txtAno);
+            this.groupBox1.Controls.Add(this.btnCadastrar);
+            this.groupBox1.Controls.Add(this.chk_Particular);
+            this.groupBox1.Controls.Add(this.chk_Venda);
+            this.groupBox1.Controls.Add(this.chk_Aluguel);
+            this.groupBox1.Controls.Add(this.chk_Roubo);
+            this.groupBox1.Controls.Add(this.chk_Sinistro);
+            this.groupBox1.Controls.Add(this.chk_Revisao);
+            this.groupBox1.Controls.Add(this.txt_Obs);
+            this.groupBox1.Controls.Add(this.txtQuilometragem);
+            this.groupBox1.Controls.Add(this.txtNumero);
+            this.groupBox1.Controls.Add(this.txtCor);
+            this.groupBox1.Controls.Add(this.txtCombustivel);
+            this.groupBox1.Controls.Add(this.txtTipo);
+            this.groupBox1.Controls.Add(this.txtfabri);
+            this.groupBox1.Controls.Add(this.txtModelo);
+            this.groupBox1.Controls.Add(this.txtMarca);
+            this.groupBox1.Controls.Add(this.txtCodigo);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.label15);
@@ -113,172 +131,162 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(-5, 1);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(809, 451);
+            this.groupBox1.Size = new System.Drawing.Size(989, 799);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Veiculos";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // dateTimePicker1
+            // btnImportar
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(77, 210);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.ShowUpDown = true;
-            this.dateTimePicker1.Size = new System.Drawing.Size(96, 20);
-            this.dateTimePicker1.TabIndex = 37;
-            this.dateTimePicker1.Value = new System.DateTime(2023, 3, 20, 0, 0, 0, 0);
+            this.btnImportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImportar.Location = new System.Drawing.Point(650, 390);
+            this.btnImportar.Name = "btnImportar";
+            this.btnImportar.Size = new System.Drawing.Size(92, 35);
+            this.btnImportar.TabIndex = 40;
+            this.btnImportar.Text = "Importar";
+            this.btnImportar.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // txtAno
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(514, 390);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 35);
-            this.button1.TabIndex = 36;
-            this.button1.Text = "Salvar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.txtAno.Location = new System.Drawing.Point(161, 208);
+            this.txtAno.Name = "txtAno";
+            this.txtAno.Size = new System.Drawing.Size(100, 20);
+            this.txtAno.TabIndex = 39;
             // 
-            // checkBox6
+            // btnCadastrar
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(514, 292);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(15, 14);
-            this.checkBox6.TabIndex = 35;
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.Location = new System.Drawing.Point(514, 390);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(92, 35);
+            this.btnCadastrar.TabIndex = 36;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click_1);
             // 
-            // checkBox5
+            // chk_Particular
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(487, 254);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(15, 14);
-            this.checkBox5.TabIndex = 34;
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.chk_Particular.AutoSize = true;
+            this.chk_Particular.Location = new System.Drawing.Point(514, 292);
+            this.chk_Particular.Name = "chk_Particular";
+            this.chk_Particular.Size = new System.Drawing.Size(15, 14);
+            this.chk_Particular.TabIndex = 35;
+            this.chk_Particular.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // chk_Venda
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(487, 210);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(15, 14);
-            this.checkBox4.TabIndex = 33;
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.chk_Venda.AutoSize = true;
+            this.chk_Venda.Location = new System.Drawing.Point(487, 254);
+            this.chk_Venda.Name = "chk_Venda";
+            this.chk_Venda.Size = new System.Drawing.Size(15, 14);
+            this.chk_Venda.TabIndex = 34;
+            this.chk_Venda.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // chk_Aluguel
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(501, 168);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(15, 14);
-            this.checkBox3.TabIndex = 32;
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.chk_Aluguel.AutoSize = true;
+            this.chk_Aluguel.Location = new System.Drawing.Point(487, 210);
+            this.chk_Aluguel.Name = "chk_Aluguel";
+            this.chk_Aluguel.Size = new System.Drawing.Size(15, 14);
+            this.chk_Aluguel.TabIndex = 33;
+            this.chk_Aluguel.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // chk_Roubo
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(487, 124);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox2.TabIndex = 31;
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chk_Roubo.AutoSize = true;
+            this.chk_Roubo.Location = new System.Drawing.Point(501, 168);
+            this.chk_Roubo.Name = "chk_Roubo";
+            this.chk_Roubo.Size = new System.Drawing.Size(15, 14);
+            this.chk_Roubo.TabIndex = 32;
+            this.chk_Roubo.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // chk_Sinistro
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(487, 77);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 30;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chk_Sinistro.AutoSize = true;
+            this.chk_Sinistro.Location = new System.Drawing.Point(487, 124);
+            this.chk_Sinistro.Name = "chk_Sinistro";
+            this.chk_Sinistro.Size = new System.Drawing.Size(15, 14);
+            this.chk_Sinistro.TabIndex = 31;
+            this.chk_Sinistro.UseVisualStyleBackColor = true;
             // 
-            // textBox12
+            // chk_Revisao
             // 
-            this.textBox12.Location = new System.Drawing.Point(522, 326);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(100, 20);
-            this.textBox12.TabIndex = 29;
+            this.chk_Revisao.AutoSize = true;
+            this.chk_Revisao.Location = new System.Drawing.Point(487, 77);
+            this.chk_Revisao.Name = "chk_Revisao";
+            this.chk_Revisao.Size = new System.Drawing.Size(15, 14);
+            this.chk_Revisao.TabIndex = 30;
+            this.chk_Revisao.UseVisualStyleBackColor = true;
             // 
-            // textBox11
+            // txt_Obs
             // 
-            this.textBox11.Location = new System.Drawing.Point(519, 36);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 20);
-            this.textBox11.TabIndex = 28;
+            this.txt_Obs.Location = new System.Drawing.Point(522, 326);
+            this.txt_Obs.Name = "txt_Obs";
+            this.txt_Obs.Size = new System.Drawing.Size(100, 20);
+            this.txt_Obs.TabIndex = 29;
             // 
-            // textBox10
+            // txtQuilometragem
             // 
-            this.textBox10.Location = new System.Drawing.Point(77, 381);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 27;
+            this.txtQuilometragem.Location = new System.Drawing.Point(519, 36);
+            this.txtQuilometragem.Name = "txtQuilometragem";
+            this.txtQuilometragem.Size = new System.Drawing.Size(100, 20);
+            this.txtQuilometragem.TabIndex = 28;
             // 
-            // textBox9
+            // txtNumero
             // 
-            this.textBox9.Location = new System.Drawing.Point(126, 343);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 26;
+            this.txtNumero.Location = new System.Drawing.Point(161, 344);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(100, 20);
+            this.txtNumero.TabIndex = 26;
             // 
-            // textBox8
+            // txtCor
             // 
-            this.textBox8.Location = new System.Drawing.Point(73, 309);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 25;
+            this.txtCor.Location = new System.Drawing.Point(161, 306);
+            this.txtCor.Name = "txtCor";
+            this.txtCor.Size = new System.Drawing.Size(100, 20);
+            this.txtCor.TabIndex = 25;
             // 
-            // textBox7
+            // txtCombustivel
             // 
-            this.textBox7.Location = new System.Drawing.Point(102, 261);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 24;
+            this.txtCombustivel.Location = new System.Drawing.Point(161, 254);
+            this.txtCombustivel.Name = "txtCombustivel";
+            this.txtCombustivel.Size = new System.Drawing.Size(100, 20);
+            this.txtCombustivel.TabIndex = 24;
             // 
-            // textBox5
+            // txtTipo
             // 
-            this.textBox5.Location = new System.Drawing.Point(90, 169);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 22;
+            this.txtTipo.Location = new System.Drawing.Point(161, 168);
+            this.txtTipo.Name = "txtTipo";
+            this.txtTipo.Size = new System.Drawing.Size(100, 20);
+            this.txtTipo.TabIndex = 22;
             // 
-            // textBox4
+            // txtfabri
             // 
-            this.textBox4.Location = new System.Drawing.Point(95, 137);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 21;
+            this.txtfabri.Location = new System.Drawing.Point(161, 137);
+            this.txtfabri.Name = "txtfabri";
+            this.txtfabri.Size = new System.Drawing.Size(100, 20);
+            this.txtfabri.TabIndex = 21;
             // 
-            // textBox3
+            // txtModelo
             // 
-            this.textBox3.Location = new System.Drawing.Point(90, 100);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 20;
+            this.txtModelo.Location = new System.Drawing.Point(161, 98);
+            this.txtModelo.Name = "txtModelo";
+            this.txtModelo.Size = new System.Drawing.Size(100, 20);
+            this.txtModelo.TabIndex = 20;
             // 
-            // textBox2
+            // txtMarca
             // 
-            this.textBox2.Location = new System.Drawing.Point(90, 71);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 19;
+            this.txtMarca.Location = new System.Drawing.Point(161, 72);
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Size = new System.Drawing.Size(100, 20);
+            this.txtMarca.TabIndex = 19;
             // 
-            // label18
+            // txtCodigo
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(8, 380);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(63, 18);
-            this.label18.TabIndex = 18;
-            this.label18.Text = "Nº placa";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(126, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 17;
+            this.txtCodigo.Location = new System.Drawing.Point(161, 45);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(100, 20);
+            this.txtCodigo.TabIndex = 17;
             // 
             // label17
             // 
@@ -449,23 +457,154 @@
             this.label1.Size = new System.Drawing.Size(108, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Código Veiculo";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Codigo,
+            this.Marca,
+            this.Modelo,
+            this.Fabricante,
+            this.Tipo,
+            this.Ano,
+            this.Combustivel,
+            this.Cor,
+            this.Chassi,
+            this.Kilometragem,
+            this.Observações,
+            this.Revisão,
+            this.Sinistro,
+            this.Roubo,
+            this.Aluguel,
+            this.Venda,
+            this.Particular});
+            this.dataGridView1.Location = new System.Drawing.Point(20, 508);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(740, 262);
+            this.dataGridView1.TabIndex = 111;
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            // 
+            // Marca
+            // 
+            this.Marca.HeaderText = "Marca";
+            this.Marca.Name = "Marca";
+            this.Marca.ReadOnly = true;
+            // 
+            // Modelo
+            // 
+            this.Modelo.HeaderText = "Modelo";
+            this.Modelo.Name = "Modelo";
+            this.Modelo.ReadOnly = true;
+            // 
+            // Fabricante
+            // 
+            this.Fabricante.HeaderText = "Fabricante";
+            this.Fabricante.Name = "Fabricante";
+            this.Fabricante.ReadOnly = true;
+            // 
+            // Tipo
+            // 
+            this.Tipo.HeaderText = "Tipo";
+            this.Tipo.Name = "Tipo";
+            this.Tipo.ReadOnly = true;
+            // 
+            // Ano
+            // 
+            this.Ano.HeaderText = "Ano";
+            this.Ano.Name = "Ano";
+            this.Ano.ReadOnly = true;
+            // 
+            // Combustivel
+            // 
+            this.Combustivel.HeaderText = "Combustivel";
+            this.Combustivel.Name = "Combustivel";
+            this.Combustivel.ReadOnly = true;
+            // 
+            // Cor
+            // 
+            this.Cor.HeaderText = "Cor";
+            this.Cor.Name = "Cor";
+            this.Cor.ReadOnly = true;
+            // 
+            // Chassi
+            // 
+            this.Chassi.HeaderText = "Chassi";
+            this.Chassi.Name = "Chassi";
+            this.Chassi.ReadOnly = true;
+            // 
+            // Kilometragem
+            // 
+            this.Kilometragem.HeaderText = "Km";
+            this.Kilometragem.Name = "Kilometragem";
+            this.Kilometragem.ReadOnly = true;
+            // 
+            // Observações
+            // 
+            this.Observações.HeaderText = "Observações";
+            this.Observações.Name = "Observações";
+            this.Observações.ReadOnly = true;
+            // 
+            // Revisão
+            // 
+            this.Revisão.HeaderText = "Revisão";
+            this.Revisão.Name = "Revisão";
+            this.Revisão.ReadOnly = true;
+            // 
+            // Sinistro
+            // 
+            this.Sinistro.HeaderText = "Sinistro";
+            this.Sinistro.Name = "Sinistro";
+            this.Sinistro.ReadOnly = true;
+            // 
+            // Roubo
+            // 
+            this.Roubo.HeaderText = "Roubo/Furto";
+            this.Roubo.Name = "Roubo";
+            this.Roubo.ReadOnly = true;
+            // 
+            // Aluguel
+            // 
+            this.Aluguel.HeaderText = "Aluguel";
+            this.Aluguel.Name = "Aluguel";
+            this.Aluguel.ReadOnly = true;
+            // 
+            // Venda
+            // 
+            this.Venda.HeaderText = "Venda";
+            this.Venda.Name = "Venda";
+            this.Venda.ReadOnly = true;
+            // 
+            // Particular
+            // 
+            this.Particular.HeaderText = "Particular";
+            this.Particular.Name = "Particular";
+            this.Particular.ReadOnly = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(976, 799);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -474,24 +613,22 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.CheckBox chk_Particular;
+        private System.Windows.Forms.CheckBox chk_Venda;
+        private System.Windows.Forms.CheckBox chk_Aluguel;
+        private System.Windows.Forms.CheckBox chk_Roubo;
+        private System.Windows.Forms.CheckBox chk_Sinistro;
+        private System.Windows.Forms.CheckBox chk_Revisao;
+        private System.Windows.Forms.TextBox txt_Obs;
+        private System.Windows.Forms.TextBox txtQuilometragem;
+        private System.Windows.Forms.TextBox txtNumero;
+        private System.Windows.Forms.TextBox txtCor;
+        private System.Windows.Forms.TextBox txtCombustivel;
+        private System.Windows.Forms.TextBox txtTipo;
+        private System.Windows.Forms.TextBox txtfabri;
+        private System.Windows.Forms.TextBox txtModelo;
+        private System.Windows.Forms.TextBox txtMarca;
+        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
@@ -509,8 +646,27 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.TextBox txtAno;
+        private System.Windows.Forms.Button btnImportar;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Modelo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fabricante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ano;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Combustivel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Chassi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Kilometragem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Observações;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Revisão;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Sinistro;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Roubo;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Aluguel;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Venda;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Particular;
     }
 }
 
